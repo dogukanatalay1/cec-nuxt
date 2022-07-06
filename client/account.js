@@ -1,5 +1,5 @@
 export default axios => ({
-  login: (parameters = {}) => {
+  signin: (parameters = {}) => {
     return axios.post('accounts/login/', {
       ...parameters
     })

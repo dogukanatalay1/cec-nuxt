@@ -25,7 +25,6 @@ export default {
   methods: {
     getEvents () {
       this.$API.events.getEvents().then((response) => {
-        // console.log(response.data[1].album)
         this.events = response.data
       })
     }
