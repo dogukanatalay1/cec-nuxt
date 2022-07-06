@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <AuthSignUpForm />
-  </div>
+  <div />
 </template>
 
 <script>

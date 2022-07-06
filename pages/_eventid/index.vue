@@ -1,6 +1,9 @@
 <template>
   <div>
     <EventsEventDetail v-if="singleEvent" :single-event="singleEvent" />
+    <div v-else>
+      bla
+    </div>
   </div>
 </template>
 

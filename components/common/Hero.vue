@@ -31,7 +31,7 @@ export default {
 @import '@/assets/scss/main.scss';
 @import '@/assets/scss/colors.scss';
 .hero {
-  height: 60vh;
+  height: 50vh;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
     url('@/assets/images/hero1.jpg');

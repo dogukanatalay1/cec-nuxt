@@ -4,11 +4,6 @@
 
 <script>
 export default {
-  name: 'SignUpForm',
-  data () {
-    return {
-
-    }
-  }
+  name: 'LoginPage'
 }
 </script>

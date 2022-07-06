@@ -1,10 +1,8 @@
 <template>
-  <div class="books-container d-flex flex-column align-items-center">
-    <div class="books-container-header">
-      <h4 class="books-container-header-header">
-        Alınmaya Hazır Kitaplarımız
-      </h4>
-    </div>
+  <div class="books">
+    <h3 class="books-header mb-5 mt-2">
+      Kulübümüzde Bulunan Kitaplar
+    </h3>
     <BooksBook v-for="book in books" :key="book.id" :book="book" />
   </div>
 </template>
@@ -26,13 +24,14 @@ export default {
     getBooks () {
       this.$API.books.getBooks().then((response) => {
         this.books = response.data
+        // console.log(response)
       })
     }
-    // async getBooks () {
-    //   const data = axios.get(process.env.BASE_URL + 'books/')
-    //   const result = await data
-
-    //   this.books = result.data
+    // getBooks () {
+    //   axios.get('https://ktucectest.herokuapp.com/api/books/')
+    //     .then((response) => {
+    //       this.books = response.data.books
+    //     })
     // }
   }
 }
@@ -40,25 +39,43 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/scss/colors.scss';
+@import '@/assets/scss/main.scss';
 
-.books-container {
-  border: 1px solid black;
-  width: 24%;
-  border-radius: 12px;
-  box-shadow: 4px 2px grey;
-  transition: 0.4s;
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 5px;
+  transition: 0.4s ease-in-out all;
 
   &:hover {
-    box-shadow: 5px 3px $about-black;
-    transition: 0.4s;
+    background-color: #777;
   }
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+.books {
+  margin: 20px;
+  width: 32%;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  // background-color: $about-black;
+  background-color: #722f37;
+  max-height: 70vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 
   &-header {
-    border: 1px solid black;
-
-    &-header {
-      border: 1px solid black;
-    }
+    text-align: center;
+    color: #fff;
   }
 }
 </style>
