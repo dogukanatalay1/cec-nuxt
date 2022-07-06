@@ -66,8 +66,7 @@ export default {
   padding: 20px;
   border: 1px solid black;
   border-radius: 5px;
-  // background-color: $about-black;
-  background-color: #722f37;
+  background-color: $about-black;
   max-height: 70vh;
   overflow: scroll;
   overflow-x: hidden;
